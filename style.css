@@ -53,15 +53,15 @@ body{
     transform: scale(1.2);
 }
 
-a .time-bar:hover .time-bar-hover,
-a .volume-bar:hover .volume-bar-hover{
+.time-bar:hover .time-bar-hover,
+.volume-bar:hover .volume-bar-hover{
     background-color: #1ED760;
 }
 
-a .time-bar:hover .circle-bar,
-a .volume-bar:hover .circle-bar{
+.time-bar:hover .circle-bar,
+.volume-bar:hover .circle-bar{
     visibility: visible;
-}
+} 
 
 
 
@@ -214,8 +214,8 @@ a .volume-bar:hover .circle-bar{
 .upgrade-bar{
     margin: 3px;
     border: 2px solid royalblue;
-    
-    
+
+
     height: 90px;
 }
 
@@ -230,15 +230,12 @@ a .volume-bar:hover .circle-bar{
 
 /* song */
 .song-wrap{
-    margin: 3px;
-    border: 2px solid aqua;
-    
     display: flex;
     justify-content: space-between;
     gap: 10px;
     align-items: center ;
     color: #fff;
-    padding-left:  10px;
+    margin-left:  10px;
 }
 
 .song-wrap .song-img{
@@ -248,7 +245,8 @@ a .volume-bar:hover .circle-bar{
 }
 
 .song-wrap .song{
-    width: 100px;
+    max-width: 400px;
+    padding-right: 30px;
 }
 
 .song-wrap .song .title-song{
@@ -274,13 +272,13 @@ a .volume-bar:hover .circle-bar{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
+    width: 100%;
+    max-width: 530px;
+    margin: 0px 20px 0px 20px;
 }
 
 
 .icon-player-wrap{
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -301,9 +299,7 @@ a .volume-bar:hover .circle-bar{
 
 /* timebar */
 .time-bar-wrap{
-    border: 2px solid aqua;
-
-
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -317,9 +313,10 @@ a .volume-bar:hover .circle-bar{
 
 .time-bar{
     background-color: #5A5A5A;
-    width: 430px;
+    flex-grow: 1;
     height: 4px;
     border-radius: 9999px;
+    cursor: pointer;
 }
 
 .time-bar-hover{
@@ -328,6 +325,7 @@ a .volume-bar:hover .circle-bar{
     width: 20%;
     height: 4px;
     border-radius: 9999px;
+    position: relative;
 }
 
 .circle-bar{
@@ -358,6 +356,7 @@ a .volume-bar:hover .circle-bar{
     width: 120px;
     height: 4px;
     border-radius: 9999px;
+    cursor: pointer;
 }
 
 .volume-bar-hover{
