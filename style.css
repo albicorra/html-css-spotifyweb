@@ -73,13 +73,11 @@ body{
 .side-bar{
     display: flex;
     flex-direction: column;
-    max-height: calc( 100vh - 90px );
     width: 230px;
-    flex-shrink: 1;
+    flex-shrink: 0;
     background-color: #000;
     color: #fff;
     padding: 20px;
-    position: relative;
 }
 
 .widget{
@@ -144,12 +142,13 @@ body{
 
 /* profile */
 .container-profile{
-    width: 100%;
-    position: absolute;
+    width: 230px;
+    position: fixed;
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
     padding: 10px;
-    bottom: 0;
+    bottom: 90px;
     left: 0;
     background-color: #000;
 }
@@ -268,17 +267,26 @@ body{
 
 .album-container{
     display: flex;
+    flex-direction: column;
     gap: 30px;
+    padding-bottom: 50px;
 }
 
 
 
 
-.album-wrap{
+.section-wrap{
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 15px;
+}
+
+.album-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 15px;
 }
 
 .album{
