@@ -55,13 +55,32 @@ body{
 
 .time-bar:hover .time-bar-hover,
 .volume-bar:hover .volume-bar-hover{
-    background-color: #1ED760;
+    background-color: #ADFF2F;
 }
 
 .time-bar:hover .circle-bar,
 .volume-bar:hover .circle-bar{
     visibility: visible;
-} 
+}
+
+.item__nav a:hover{
+    color: #fff;
+}
+
+.item__nav a:hover::after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    bottom: -5px;
+    border: 1px solid #ADFF2F;
+}
+
+.img__album:hover .play__album{
+    visibility: visible;
+}
+
+
 
 
 
@@ -227,9 +246,6 @@ body{
 
 /* music container */
 .music-container{
-    border: 2px solid maroon;
-    
-    
     display: flex;
     flex-grow: 1;
     flex-direction: column;
@@ -251,6 +267,21 @@ body{
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 800;
+    position: relative;
+}
+
+.item__nav.active a{
+    color: #fff;
+}
+
+.item__nav.active a::after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    bottom: -5px;
+    border: 1px solid #ADFF2F;
+    color: #fff;
 }
 
 
@@ -284,9 +315,7 @@ body{
 
 .album-wrap{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    column-gap: 15px;
+    column-gap: 25px;
 }
 
 .album{
@@ -299,6 +328,32 @@ body{
     font-size: 12px;
 }
 
+.img__album{
+    position: relative;
+}
+
+.img__album img{
+    display: block;
+}
+
+.img__album .play__album{
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+
+.img__album .play__album i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+}
+
 .album-information{
     text-align: center;
 }
@@ -306,8 +361,13 @@ body{
 .subtitle{
     color: #7D7F84;
     padding-top: 10px;
+    font-size: 12px;
 }
 
+.popolar-artist{
+    border-radius: 50%;
+    overflow: hidden;
+}
 
 
 
