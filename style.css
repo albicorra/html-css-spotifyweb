@@ -83,6 +83,10 @@ body{
     visibility: visible;
 }
 
+.album-wrap:hover .move-bar{
+    display: block;
+}
+
 
 
 
@@ -325,6 +329,7 @@ body{
 .album-wrap{
     display: flex;
     column-gap: 1%;
+    position: relative;
 }
 
 .album{
@@ -378,13 +383,47 @@ body{
     overflow: hidden;
 }
 
-.move-bar{
+.move-bar.right{
     position: absolute;
     right: 15px;
     top: 0;
+    bottom: 15px;
+    width: 50px;
+    background-image: linear-gradient(to right, rgba(173, 255, 47,0.0) , rgba(173, 255, 47,0.8));
+    z-index: 99;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    display: none;
+    border-radius: 3px;
+}
+
+.move-bar.right i{
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.move-bar.down{
+    width: 32.2%;
+    position: absolute;
+    bottom: -10%;
+    height: 50px;
+    background-image: linear-gradient(to bottom, rgba(173, 255, 47,0.0) , rgba(173, 255, 47,0.8));
+    z-index: 99;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    display: none;
+    border-radius: 3px;
+}
+
+.move-bar.down i{
+    position: absolute;
+    left: 50%;
     bottom: 0;
-    right: 90%;
-    background-color: rgba(173, 255, 47);
+    transform: translate(-50%, -50%);
 }
 
 
@@ -399,6 +438,7 @@ body{
     position: fixed;
     width: 100%;
     bottom: 0;
+    z-index: 999;
 }
 
 /* song */
@@ -563,6 +603,10 @@ body{
 
     .album-wrap .album{
         width: 22%;
+    }
+
+    .album-wrap:hover .move-bar{
+        display: none;
     }
 
 }
