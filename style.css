@@ -70,16 +70,18 @@ body{
 .item__nav a:hover::after {
     content: "";
     position: absolute;
-    left: 25%;
-    right: 25%;
-    bottom: -5px;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 25px;
     border: 1px solid #ADFF2F;
+    color: #fff;
 }
 
 .img__album:hover .play__album{
     visibility: visible;
 }
-
 
 
 
@@ -107,6 +109,10 @@ body{
 /* logo */
 .logo{
     width: 140px;
+}
+
+.logo-small{
+    display: none;
 }
 
 
@@ -258,7 +264,8 @@ body{
 .nav-bar{
     display: flex;
     justify-content: center;
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 .item__nav a{
@@ -277,9 +284,11 @@ body{
 .item__nav.active a::after {
     content: "";
     position: absolute;
-    left: 25%;
-    right: 25%;
-    bottom: -5px;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 25px;
     border: 1px solid #ADFF2F;
     color: #fff;
 }
@@ -315,14 +324,14 @@ body{
 
 .album-wrap{
     display: flex;
-    column-gap: 25px;
+    column-gap: 1%;
 }
 
 .album{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 15%;
+    width: 15.6%;
     row-gap: 20px;
     padding-top: 15px;
     font-size: 12px;
@@ -369,6 +378,14 @@ body{
     overflow: hidden;
 }
 
+.move-bar{
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    right: 90%;
+    background-color: rgba(173, 255, 47);
+}
 
 
 
@@ -416,6 +433,10 @@ body{
 
 .icon-song{
     color: #878787;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
 }
 
 
@@ -430,7 +451,7 @@ body{
     align-items: center;
     width: 100%;
     max-width: 530px;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 50px 0px 50px;
 }
 
 
@@ -523,4 +544,87 @@ body{
     width: 20%;
     height: 4px;
     border-radius: 9999px;
+}
+
+
+
+
+
+
+
+
+/* media queries */
+@media screen and (max-width: 878px) {
+
+    .section-wrap .album-wrap{
+        column-gap: 2%;
+        flex-wrap: wrap;
+    }
+
+    .album-wrap .album{
+        width: 22%;
+    }
+
+}
+
+@media screen and (max-width: 639px) {
+
+    .section-wrap .album-wrap{
+        column-gap: 2%;
+    }
+
+    .album-wrap .album{
+        width: 49%;
+    }
+
+    .icon-song{
+        flex-direction: column;
+    }
+
+    .player{
+        margin: 0px 15px 0px 15px;
+    }
+
+}
+
+@media screen and (max-width: 552px) {
+
+    .side-bar{
+        width: 50px;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .logo,
+    .menù-item span,
+    .playlist,
+    .container-profile span,
+    .container-profile h4{
+        display: none;
+    }
+    
+    .logo-small{
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .menù-item .icon{
+        margin-right: 0;
+    }
+
+    #download{
+        border: none;
+    }
+    
+    .container-profile{
+        width: 50px;
+        align-items: center;
+    }
+
+    .upgrade-button{
+        right: -28%;
+    }
+
 }
