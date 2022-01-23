@@ -47,9 +47,12 @@ body{
     text-decoration: underline;
 }
 
-.icon-player.play:hover,
 .upgrade-button a:hover{
     transform: scale(1.1);
+}
+
+.icon-player.play:hover{
+    transform: scale(1.2);
 }
 
 .time-bar:hover .time-bar-hover,
@@ -96,10 +99,6 @@ body{
     bottom: 15%;
 }
 
-/* .album:hover .play__album{
-    padding-bottom: 10px;
-    transition: 0.2s;
-} */
 .album:hover .button-play-recently{
     bottom: 115px;
 }
@@ -561,7 +560,7 @@ body{
 }
 
 .icon-player.play{
-    font-size: 35px;
+    font-size: 30px;
     transition: 0.2s;
 }
 
