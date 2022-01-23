@@ -78,13 +78,33 @@ body{
     color: #fff;
 }
 
-.img__album:hover .play__album{
+.album:hover .play__album{
     visibility: visible;
 }
+
+.album:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
 
 .album-wrap:hover .move-bar{
     display: block;
 }
+
+.album:hover .button-play{
+    bottom: 15%;
+}
+
+/* .album:hover .play__album{
+    padding-bottom: 10px;
+    transition: 0.2s;
+} */
+.album:hover .button-play-recently{
+    bottom: 115px;
+}
+
+
 
 
 
@@ -345,6 +365,9 @@ body{
     row-gap: 20px;
     padding-top: 15px;
     font-size: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .img__album{
@@ -355,22 +378,47 @@ body{
     display: block;
 }
 
-.img__album .play__album{
+.play__album{
     position: absolute;
     top: 0;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
     visibility: hidden;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    padding-right: 10px;
 }
 
-.img__album .play__album i{
+.play-artist{
+    bottom: 20px;
+    right: 10px;
+    z-index: 5;
+}
+
+.button-play-recently{
+    bottom: 100px;
+    right: 10px;
+    z-index: 5;
+}
+
+.play__album div{
+    background-color: #1BC156;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    overflow: visible;
+    transition: 0.3s;
+}
+
+.play__album i{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 60px;
+    font-size: 15px;
 }
 
 .album-information{
